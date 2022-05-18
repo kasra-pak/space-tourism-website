@@ -7,6 +7,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js'
     },
+    devServer: {
+        port: '3000',
+        client: {
+            logging: 'warn',
+        },
+    },
     module: {
         rules: [
             {

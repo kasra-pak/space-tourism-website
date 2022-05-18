@@ -1,6 +1,35 @@
 import { createGlobalStyle } from "styled-components";
 
  const GlobalStyle = createGlobalStyle`
+  
+  :root {
+    //font-family
+    --font-primary: 'Bellefair', serif;
+    --font-secondary: 'Barlow Condensed', sans-serif;
+    --font-tertiary: 'Barlow', sans-serif;
+
+    //font-size
+    --fs-150: 9.375rem; // not used
+    --fs-100: 6.25rem; // not used
+    --fs-80: 5rem;
+    --fs-56: 3.5rem; // not used
+    --fs-32: 2rem; // not used
+    --fs-28: 1.75rem; // not used
+    --fs-20: 1.25rem;
+    --fs-16: 1rem;
+    --fs-15: .9375rem;
+    --fs-14: .875rem; // not used
+
+    //colors
+    --dark-rift: #0b0d17;
+    --icy-plains: #d0d6f9;
+    --white: #fff;
+
+    --primary-text-color: var(--icy-plains);
+    --secondary-text-color: var(--white);
+    --tertiary-text-color: var(--dark-rift);
+  }
+  
   *,
   *::before,
   *::after {
@@ -8,6 +37,10 @@ import { createGlobalStyle } from "styled-components";
   }
   
   body {
+    margin: 0;
+  }
+
+  h1, p {
     margin: 0;
   }
 
