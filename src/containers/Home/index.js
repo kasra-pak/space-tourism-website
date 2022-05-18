@@ -1,10 +1,12 @@
 import React from "react";
 
-import { Hero, Container, Title, Text, Button } from "./Home.styled"; 
+import { Hero, Container, Title, Text, Button } from "./Home.styled";
+import Navbar from '../../components/Navbar'
 
 export default function Home() {
   return (
     <Hero>
+      <Navbar />
       <Container>
         <section>
           <Title><span>so, you want to travel to</span> space</Title>

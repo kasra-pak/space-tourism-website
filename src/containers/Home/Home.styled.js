@@ -29,7 +29,7 @@ const Hero = styled.div`
 const Container = styled.div`
   text-align: center;
   width: 85%;
-  min-height: 100%;
+  min-height: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
