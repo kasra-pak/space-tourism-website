@@ -38,10 +38,12 @@ import { createGlobalStyle } from "styled-components";
   
   body {
     margin: 0;
+    overflow: hidden;
   }
 
-  h1, p {
+  h1, p, ul {
     margin: 0;
+    padding: 0;
   }
 
   img {

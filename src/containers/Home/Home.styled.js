@@ -51,6 +51,7 @@ const Title = styled.h1`
     color: var(--primary-text-color);
     letter-spacing: 2.7px;
     display: block;
+    margin-bottom: 1.25em;
   }
 `
 

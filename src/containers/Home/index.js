@@ -2,10 +2,12 @@ import React from "react";
 
 import { Hero, Container, Title, Text, Button } from "./Home.styled";
 import Navbar from '../../components/Navbar'
+import MobileMenu from "../../components/MobileMenu";
 
-export default function Home() {
+function Home() {
   return (
     <Hero>
+      <MobileMenu />
       <Navbar />
       <Container>
         <section>
@@ -19,3 +21,5 @@ export default function Home() {
     </Hero>
   )
 }
+
+export default Home

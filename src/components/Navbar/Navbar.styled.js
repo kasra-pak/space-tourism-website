@@ -20,10 +20,11 @@ const Hamburger = styled.button`
   height: 22px;
   padding: .25em;
   cursor: pointer;
-  background: url(${hamburgerImg});
+  background: url(${props => props.open ? closeImg : hamburgerImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 2;
 `
 
 export { Container, Content, Logo, Hamburger }
