@@ -14,11 +14,11 @@ import { createGlobalStyle } from "styled-components";
     --fs-80: 5rem;
     --fs-56: 3.5rem; // not used
     --fs-32: 2rem; // not used
-    --fs-28: 1.75rem; // not used
+    --fs-28: 1.75rem;
     --fs-20: 1.25rem;
     --fs-16: 1rem;
     --fs-15: .9375rem;
-    --fs-14: .875rem; // not used
+    --fs-14: .875rem;
 
     //colors
     --dark-rift: #0b0d17;
@@ -41,7 +41,7 @@ import { createGlobalStyle } from "styled-components";
     overflow: hidden;
   }
 
-  h1, p, ul {
+  h1, h2, p, ul {
     margin: 0;
     padding: 0;
   }

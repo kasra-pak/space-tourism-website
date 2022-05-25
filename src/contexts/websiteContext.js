@@ -1,19 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
-import data from '../data.json'
+import data from '../data'
 
 const SiteContext = React.createContext()
 
 function SiteContextProvider({ children }) {
-  const [content, setContent] = useState({})
+  const [content, setContent] = useState(data)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  function fetchData() {
-    setContent(data)
-  }
+  // function fetchData() {
+  //   setContent(data)
+  // }
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
 
   function toggleMobileMenu() {
     setIsMobileMenuOpen(prevState => !prevState)
