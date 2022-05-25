@@ -20,20 +20,7 @@ const Container = styled.div`
 const NavList = styled.ul`
   list-style: none;
   margin-top: 7.5em;
-  
-  li {
-    margin-left: 2em;
-    transition: border .15s ease;
-
-    + li {
-      margin-top: 1em;    
-    }
-
-    &:hover {
-      border-right: 4px solid rgba(255, 255, 255, .5);
-    }
-  }
-  
+ 
   a {
     font-family: var(--font-secondary);
     color: var(--secondary-text-color);
@@ -53,4 +40,22 @@ const NavList = styled.ul`
   }
 `
 
-export { Container, NavList }
+const Item = styled.li`
+  margin-left: 2em;
+  transition: border .15s ease;
+  border-right: ${({activepage}) => activepage ?
+      '4px solid var(--secondary-text-color)': 'none'};
+
+  + li {
+    margin-top: 1em;    
+  }
+
+  &:hover {
+    border-right: ${({activepage}) => activepage ?
+      '4px solid var(--secondary-text-color)':
+      '4px solid rgba(255, 255, 255, .5)'};
+  }
+
+`
+
+export { Container, NavList, Item }
