@@ -14,6 +14,7 @@ const Container = styled.div`
   overflow: hidden;
   transform: translateX(${props => props.show ? '0' : '100%'});
   transition: transform .3s ease;
+  z-index: 2;
 `
 
 const NavList = styled.ul`

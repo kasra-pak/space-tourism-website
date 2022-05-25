@@ -3,6 +3,11 @@ import marsImg from './images/destination/image-mars.png'
 import europaImg from './images/destination/image-europa.png'
 import titanImg from './images/destination/image-titan.png'
 
+import douglasImg from './images/crew/image-douglas-hurley.png'
+import markImg from './images/crew/image-mark-shuttleworth.png'
+import victorImg from './images/crew/image-victor-glover.png'
+import anoushehImg from './images/crew/image-anousheh-ansari.png'
+
 export default {
   "destinations": [
     {
@@ -50,7 +55,7 @@ export default {
     {
       "name": "Douglas Hurley",
       "images": {
-        "png": "../../images/crew/image-douglas-hurley.png",
+        "png": douglasImg,
         "webp": "../../images/crew/image-douglas-hurley.webp"
       },
       "role": "Commander",
@@ -59,7 +64,7 @@ export default {
     {
       "name": "Mark Shuttleworth",
       "images": {
-        "png": "../../images/crew/image-mark-shuttleworth.png",
+        "png": markImg,
         "webp": "../../images/crew/image-mark-shuttleworth.webp"
       },
       "role": "Mission Specialist",
@@ -68,7 +73,7 @@ export default {
     {
       "name": "Victor Glover",
       "images": {
-        "png": "../../images/crew/image-victor-glover.png",
+        "png": victorImg,
         "webp": "../../images/crew/image-victor-glover.webp"
       },
       "role": "Pilot",
@@ -77,7 +82,7 @@ export default {
     {
       "name": "Anousheh Ansari",
       "images": {
-        "png": "../../images/crew/image-anousheh-ansari.png",
+        "png": anoushehImg,
         "webp": "../../images/crew/image-anousheh-ansari.webp"
       },
       "role": "Flight Engineer",

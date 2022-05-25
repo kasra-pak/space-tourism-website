@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { useSiteContext } from "../../contexts/websiteContext";
 import { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistic } from "./Destination.styled";
@@ -22,7 +22,7 @@ function Destination() {
     <Navbar />
     <Container>
       <section>
-        <Title><span>01</span> pick your destination</Title>
+        <Title><span>01</span>pick your destination</Title>
         <TabImg src={currDestData.images.png} alt={currDestData.name} />
         <Tabs>
           {content.destinations.map((dest, idx) => (
