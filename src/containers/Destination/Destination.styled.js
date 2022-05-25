@@ -8,8 +8,9 @@ const Hero = styled.div`
   background: url(${mobileBG});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   background-position: center;
+  padding-bottom: 1em;
 
   @media screen and (min-width: 480px) {
     background: url(${tabletBG});

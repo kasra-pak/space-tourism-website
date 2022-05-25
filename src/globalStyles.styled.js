@@ -39,7 +39,8 @@ import { createGlobalStyle } from "styled-components";
   
   body {
     margin: 0;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   h1, h2, p, ul {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import mobileBG from '../../images/crew/background-crew-mobile.jpg'
-import tabletBG from '../../images/crew/background-crew-tablet.jpg'
-import desktopBG from '../../images/crew/background-crew-desktop.jpg'
+import mobileBG from '../../images/technology/background-technology-mobile.jpg'
+import tabletBG from '../../images/technology/background-technology-tablet.jpg'
+import desktopBG from '../../images/technology/background-technology-desktop.jpg'
 
 const Hero = styled.div`
   background: url(${mobileBG});
@@ -34,6 +34,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
+  text-align: center;
   color: var(--secondary-text-color);
   font-family: var(--font-secondary);
   font-size: var(--fs-16);
@@ -49,48 +50,46 @@ const Title = styled.h1`
   }
 `
 
-const TabImg = styled.div`
+const TabImg = styled.img`
+  width: 374px;
+  height: 170px;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
   margin-top: 2em;
-
-  img {
-    height: 327px;
-    height: 223px;
-    margin: 0 auto;
-  }
 `
 
 const Slider = styled.ul`
   display: flex;
   justify-content: center;
   gap: 1.1em;
-  margin: 2.25em 0;
+  margin: 2em 0;
 `
 
-const Dot = styled.li`
+const Circle = styled.li`
   list-style: none;
-  text-transform: uppercase;
-  background-color: var(--secondary-text-color);
-  opacity: ${({activedot}) => activedot ? '1' : '.17'};
-  width: 10px;
-  height: 10px;
+  font-family: var(--font-primary);
+  background-color: ${({activecircle}) => activecircle ? 'var(--secondary-text-color)' : 'transparent'};
+  color: ${({activecircle}) => activecircle ? 'default' : 'var(--secondary-text-color)'};
+  border: 1px solid ${({activecircle}) => activecircle ? 'var(--secondary-text-color)' : 'rgba(255,255,255,.25)'};
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  position: relative;
   
   &:hover {
-    opacity: ${({activedot}) => activedot ? '1' : '.5'};
+    border: 1px solid var(--secondary-text-color);
   }
 `
 
-const CrewRole = styled.p`
-  font-family: var(--font-primary);
-  font-size: var(--fs-16);
+const Term = styled.p`
+  font-family: var(--font-secondary);
+  font-size: var(--fs-14);
   font-weight: 400;
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-transform: uppercase;
-  margin: .5em 0 .1em;
-  opacity: 0.5;
+  letter-spacing: 2.3625px;
 `
 
 const CrewName = styled.h2`
@@ -99,7 +98,7 @@ const CrewName = styled.h2`
   font-weight: 400;
   color: var(--secondary-text-color);
   text-transform: uppercase;
-  margin: .25em 0 1em;
+  margin: .5em 0 .75em;
 `
 
 const Text = styled.p`
@@ -110,4 +109,4 @@ const Text = styled.p`
 `
 
 
-export { Hero, Container, Title, TabImg, Slider, Dot, CrewRole, CrewName, Text }
+export { Hero, Container, Title, TabImg, Slider, Circle, Term, CrewName, Text }
