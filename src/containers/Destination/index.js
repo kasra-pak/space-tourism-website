@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { useSiteContext } from "../../contexts/websiteContext";
-import { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistic } from "./Destination.styled";
+import { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistics, Statistic } from "./Destination.styled";
 import Navbar from '../../components/Navbar'
 import MobileMenu from "../../components/MobileMenu";
 
@@ -37,9 +37,10 @@ function Destination() {
         </Tabs>
         <TabHeading>{currDestData.name}</TabHeading>
         <Text>{currDestData.description}</Text>
-        <hr />
-        <Statistic>avg. distance <span>{currDestData.distance}</span></Statistic>
-        <Statistic>est. travel time <span>{currDestData.travel}</span></Statistic>
+        <Statistics>
+          <Statistic>avg. distance <span>{currDestData.distance}</span></Statistic>
+          <Statistic>est. travel time <span>{currDestData.travel}</span></Statistic>
+        </Statistics>
       </section>
     </Container>
   </Hero>

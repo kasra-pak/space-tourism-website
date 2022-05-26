@@ -29,8 +29,7 @@ const Hero = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  width: 87%;
-  margin: 0 auto;
+  margin: 0 1.5em;
 `
 
 const Title = styled.h1`

@@ -29,8 +29,11 @@ const Hero = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  width: 87%;
-  margin: 0 auto;
+  padding: 0 1.5em;
+
+  @media screen and (min-width: 480px) {
+    padding: 0 2.5em;
+  }
 `
 
 const Title = styled.h1`
@@ -47,17 +50,32 @@ const Title = styled.h1`
     opacity: .25;
     margin-right: .75em;
   }
+
+  @media screen and (min-width: 480px) {
+    text-align: left;
+    font-size: var(--fs-20);
+    letter-spacing: 3.375px;
+  }
 `
 
 const TabImg = styled.img`
   width: 170px;
   margin: 1.75em auto;
+
+  @media screen and (min-width: 480px) {
+    width: 300px;
+    margin: 3.75em auto;
+  }
 `
 
 const Tabs = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 1.5em; 
+  gap: 1.5em;
+
+  @media screen and (min-width: 480px) {
+    gap: 2.25em;
+  }
 `
 
 const Tab = styled.li`
@@ -94,6 +112,11 @@ const Tab = styled.li`
     left: 0;
     bottom: -3px;
   }
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-16);
+    letter-spacing: 2.7px;
+  }
 `
 
 const TabHeading = styled.h2`
@@ -103,6 +126,10 @@ const TabHeading = styled.h2`
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin: .5em 0 .1em;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-80);
+  }
 `
 
 const Text = styled.p`
@@ -110,16 +137,37 @@ const Text = styled.p`
   color: var(--primary-text-color);
   font-size: var(--fs-15);
   line-height: 25px;
-  margin-bottom: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 2.25em;
+  border-bottom: 1px solid #383b4b;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-16);
+    line-height: 28px;
+    max-width: 572px;
+    padding-bottom: 3em;
+    margin: 0 auto 2.25em;
+  }
+`
+
+const Statistics = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.25em;
+
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `
 
 const Statistic = styled.p`
   font-family: var(--font-secondary);
   font-size: var(--fs-14);
+  font-weight: 400;
   color: var(--primary-text-color);
   text-transform: uppercase;
   letter-spacing: 2.3625px;
-  margin-top: 2.25em;
   
   span {
     display: block;
@@ -130,6 +178,4 @@ const Statistic = styled.p`
   }
 `
 
-
-
-export { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistic }
+export { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistics,  Statistic }
