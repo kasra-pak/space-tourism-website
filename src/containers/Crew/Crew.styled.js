@@ -17,6 +17,7 @@ const Hero = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 0;
   }
 
   @media screen and (min-width: 1025px) {
@@ -29,7 +30,17 @@ const Hero = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  margin: 0 1.5em;
+  padding: 0 1.5em;
+
+  @media screen and (min-width: 480px) {
+    padding: 0 2.5em;
+    
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `
 
 const Title = styled.h1`
@@ -46,6 +57,12 @@ const Title = styled.h1`
     opacity: .25;
     margin-right: .75em;
   }
+
+  @media screen and (min-width: 480px) {
+    align-self: flex-start;
+    font-size: var(--fs-20);
+    letter-spacing: 3.375px;
+  }
 `
 
 const TabImg = styled.div`
@@ -54,8 +71,19 @@ const TabImg = styled.div`
 
   img {
     height: 327px;
-    height: 223px;
+    width: 223px;
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: 480px) {
+    order: 3;
+    border: none;
+    overflow: hidden;
+
+    img {
+      width: 90%;
+      height: auto;
+    }
   }
 `
 
@@ -64,6 +92,11 @@ const Slider = styled.ul`
   justify-content: center;
   gap: 1.1em;
   margin: 2.25em 0;
+
+  @media screen and (min-width: 480px) {
+    order: 2;
+    margin: 2.25em 0 0;
+  }
 `
 
 const Dot = styled.li`
@@ -90,6 +123,11 @@ const CrewRole = styled.p`
   text-transform: uppercase;
   margin: .5em 0 .1em;
   opacity: 0.5;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-24);
+    margin-top: 2.5em;
+  }
 `
 
 const CrewName = styled.h2`
@@ -99,6 +137,11 @@ const CrewName = styled.h2`
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin: .25em 0 1em;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-40);
+    margin: .25 0 .5em;
+  }
 `
 
 const Text = styled.p`
@@ -106,6 +149,12 @@ const Text = styled.p`
   color: var(--primary-text-color);
   font-size: var(--fs-15);
   line-height: 25px;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-16);
+    line-height: 28px;
+    max-width: 590px;
+  }
 `
 
 

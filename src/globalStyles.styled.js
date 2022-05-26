@@ -13,6 +13,7 @@ import { createGlobalStyle } from "styled-components";
     --fs-100: 6.25rem; // not used
     --fs-80: 5rem;
     --fs-56: 3.5rem; // not used
+    --fs-40: 2.5rem;
     --fs-32: 2rem;
     --fs-28: 1.75rem;
     --fs-24: 1.5rem;
