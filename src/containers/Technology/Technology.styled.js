@@ -47,6 +47,13 @@ const Title = styled.h1`
     opacity: .25;
     margin-right: .75em;
   }
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-20);
+    letter-spacing: 3.375px;
+    text-align: left;
+    padding: 0 2em;
+  }
 `
 
 const TabImg = styled.img`
@@ -54,13 +61,19 @@ const TabImg = styled.img`
   height: 170px;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
   margin-top: 2em;
+
+  @media screen and (min-width: 480px) {
+    width: 100%;
+    height: auto;
+    margin-top: 3.5em;
+  }
 `
 
 const Slider = styled.ul`
   display: flex;
   justify-content: center;
   gap: 1.1em;
-  margin: 2em 0;
+  margin: 3.5em 0;
 `
 
 const Circle = styled.li`
@@ -80,6 +93,13 @@ const Circle = styled.li`
   &:hover {
     border: 1px solid var(--secondary-text-color);
   }
+
+  @media screen and (min-width: 480px) {
+    width: 58px;
+    height: 58px;
+    font-size: var(--fs-24);
+  }
+
 `
 
 const Term = styled.p`
@@ -89,15 +109,25 @@ const Term = styled.p`
   color: var(--primary-text-color);
   text-transform: uppercase;
   letter-spacing: 2.3625px;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-16);
+    letter-spacing: 2.7px;
+  }
 `
 
-const CrewName = styled.h2`
+const TechName = styled.h2`
   font-family: var(--font-primary);
   font-size: var(--fs-24);
   font-weight: 400;
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin: .5em 0 .75em;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-40);
+    margin: .25em 0 .5em;
+  }
 `
 
 const Text = styled.p`
@@ -105,7 +135,14 @@ const Text = styled.p`
   color: var(--primary-text-color);
   font-size: var(--fs-15);
   line-height: 25px;
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-16);
+    line-height: 28px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
 `
 
 
-export { Hero, Container, Title, TabImg, Slider, Circle, Term, CrewName, Text }
+export { Hero, Container, Title, TabImg, Slider, Circle, Term, TechName, Text }

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { useSiteContext } from "../../contexts/websiteContext";
-import { Hero, Container, Title, TabImg, Slider, Circle, Term, CrewName, Text } from "./Technology.styled";
+import { Hero, Container, Title, TabImg, Slider, Circle, Term, TechName, Text } from "./Technology.styled";
 import Navbar from '../../components/Navbar'
 import MobileMenu from "../../components/MobileMenu";
 
@@ -35,7 +35,7 @@ function Technology() {
           ))}
         </Slider>
         <Term>the terminology ...</Term>
-        <CrewName>{currTechData.name}</CrewName>
+        <TechName>{currTechData.name}</TechName>
         <Text>{currTechData.description}</Text>
       </section>
     </Container>
