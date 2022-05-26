@@ -7,14 +7,17 @@ import logoImg from '../../images/shared/logo.svg'
 
 
 function Navbar() {
-  const { isMobileMenuOpen, toggleMobileMenu } = useSiteContext()
+  const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useSiteContext()
   const location = useLocation()
 
   return (
     <Container>
       <Content>
         <Link to='/'>
-          <Logo src={logoImg} alt='Space Tourism Logo'></Logo>
+          <Logo
+            src={logoImg} alt='Space Tourism Logo'
+            onClick={closeMobileMenu}
+          ></Logo>
         </Link>
         <NavList>
           <Item 

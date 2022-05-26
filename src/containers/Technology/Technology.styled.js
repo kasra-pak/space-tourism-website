@@ -57,13 +57,12 @@ const Title = styled.h1`
 `
 
 const TabImg = styled.img`
-  width: 374px;
+  width: 100%;
   height: 170px;
   border-bottom: 1px solid rgba(255, 255, 255, .2);
   margin-top: 2em;
 
   @media screen and (min-width: 480px) {
-    width: 100%;
     height: auto;
     margin-top: 3.5em;
   }

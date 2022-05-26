@@ -19,12 +19,17 @@ function SiteContextProvider({ children }) {
     setIsMobileMenuOpen(prevState => !prevState)
   }
 
+  function closeMobileMenu() {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <SiteContext.Provider
       value={{
         content,
         isMobileMenuOpen,
         toggleMobileMenu,
+        closeMobileMenu,
       }}
     >
       { children }
