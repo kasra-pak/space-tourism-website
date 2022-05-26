@@ -60,7 +60,6 @@ const Item = styled.li`
       '4px solid var(--secondary-text-color)':
       '4px solid rgba(255, 255, 255, .5)'};
   }
-
 `
 
 export { Container, NavList, Item }

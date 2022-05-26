@@ -53,6 +53,17 @@ const Title = styled.h1`
     display: block;
     margin-bottom: 1.25em;
   }
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-150);
+    margin-bottom: .1em;
+
+    span {
+      font-size: var(--fs-20);
+      letter-spacing: 3.375px;
+      margin-bottom: .75em;
+    }
+  }
 `
 
 const Text = styled.p`
@@ -60,6 +71,11 @@ const Text = styled.p`
   color: var(--primary-text-color);
   font-size: var(--fs-15);
   line-height: 25px;
+
+  @media screen and (min-width: 480px){
+    max-width: 440px;
+    font-size: var(--fs-16);
+  }
 `
 
 const Button = styled.a`
@@ -76,6 +92,15 @@ const Button = styled.a`
 
   &:hover {
     outline: 2.5rem solid rgba(255, 255, 255, .2);
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: var(--fs-32);
+    padding: 3.206em 1.5245em;
+
+    &:hover {
+      outline: 3.5rem solid rgba(255, 255, 255, .2);
+    }
   }
 `
 

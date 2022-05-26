@@ -9,11 +9,11 @@ import { createGlobalStyle } from "styled-components";
     --font-tertiary: 'Barlow', sans-serif;
 
     //font-size
-    --fs-150: 9.375rem; // not used
+    --fs-150: 9.375rem;
     --fs-100: 6.25rem; // not used
     --fs-80: 5rem;
     --fs-56: 3.5rem; // not used
-    --fs-32: 2rem; // not used
+    --fs-32: 2rem;
     --fs-28: 1.75rem;
     --fs-24: 1.5rem;
     --fs-20: 1.25rem;
