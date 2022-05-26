@@ -25,10 +25,12 @@ import { createGlobalStyle } from "styled-components";
     --dark-rift: #0b0d17;
     --icy-plains: #d0d6f9;
     --white: #fff;
+    --transparent-dark: rgba(11, 13, 23, .95);
 
     --primary-text-color: var(--icy-plains);
     --secondary-text-color: var(--white);
     --tertiary-text-color: var(--dark-rift);
+    --navbar-bg: var(--transparent-dark);
   }
   
   *,

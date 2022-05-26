@@ -5,7 +5,7 @@ import tabletBG from '../../images/home/background-home-tablet.jpg'
 import desktopBG from '../../images/home/background-home-desktop.jpg'
 
 const Container = styled.div`
-  background: rgba(0, 0, 0, 1);
+  background-color: var(--navbar-bg);
   position: absolute;
   width: 68%;
   top: 0;
@@ -15,6 +15,11 @@ const Container = styled.div`
   transform: translateX(${props => props.show ? '0' : '100%'});
   transition: transform .3s ease;
   z-index: 2;
+
+  @supports (backdrop-filter: blur(2rem)) {
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(2rem);
+  }
 `
 
 const NavList = styled.ul`

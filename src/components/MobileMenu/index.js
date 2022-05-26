@@ -7,7 +7,6 @@ import { Container, NavList, Item } from './MobileMenu.styled'
 function MobileMenu() {
   const { isMobileMenuOpen } = useSiteContext()
   const location = useLocation()
-  console.log(location.pathname==='/')
 
   return (
     <Container show={isMobileMenuOpen}>
