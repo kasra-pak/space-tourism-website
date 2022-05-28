@@ -29,11 +29,21 @@ const Hero = styled.div`
 const Container = styled.div`
   text-align: center;
   min-height: 85%;
-  margin: 0 1.5em;
+  padding: 0 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 67%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
 `
 
 const Title = styled.h1`
@@ -63,6 +73,15 @@ const Title = styled.h1`
       margin-bottom: .75em;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    margin-bottom: .2em;
+
+    span {
+      font-size: var(--fs-28);
+      letter-spacing: 4.725px;
+    }
+  }
 `
 
 const Text = styled.p`
@@ -72,8 +91,15 @@ const Text = styled.p`
   line-height: 25px;
 
   @media screen and (min-width: 480px){
-    max-width: 440px;
     font-size: var(--fs-16);
+    line-height: 28px;
+    max-width: 440px;
+  }
+
+  @media screen and (min-width: 480px){
+    font-size: var(--fs-18);
+    line-height: 32px;
+    max-width: 444px;
   }
 `
 
@@ -99,6 +125,14 @@ const Button = styled.a`
 
     &:hover {
       outline: 3.5rem solid rgba(255, 255, 255, .2);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 3.706em 2.0245em;
+
+    &:hover {
+      outline: 4.25rem solid rgba(255, 255, 255, .2);
     }
   }
 `

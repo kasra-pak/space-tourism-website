@@ -20,6 +20,10 @@ const Container = styled.div`
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(2rem);
   }
+
+  @media screen and (min-width: 575px) {
+    transform: translateX(100%);
+  }
 `
 
 const NavList = styled.ul`

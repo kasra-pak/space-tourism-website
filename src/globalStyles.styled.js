@@ -18,6 +18,7 @@ import { createGlobalStyle } from "styled-components";
     --fs-28: 1.75rem;
     --fs-24: 1.5rem;
     --fs-20: 1.25rem;
+    --fs-18: 1.125rem;
     --fs-16: 1rem;
     --fs-15: .9375rem;
     --fs-14: .875rem;

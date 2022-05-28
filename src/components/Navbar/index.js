@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from 'react-router-dom'
 
 import { useSiteContext } from '../../contexts/websiteContext'
-import { Container, Content, Logo, NavList, Item, Hamburger } from "./Navbar.styled";
+import { Container, Content, Logo, WhiteLine, NavList, Item, Hamburger } from "./Navbar.styled";
 import logoImg from '../../images/shared/logo.svg'
 
 
@@ -19,6 +19,7 @@ function Navbar() {
             onClick={closeMobileMenu}
           ></Logo>
         </Link>
+        <WhiteLine />
         <NavList>
           <Item 
             activepage={location.pathname == '/'}
