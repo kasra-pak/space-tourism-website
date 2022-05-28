@@ -41,6 +41,24 @@ const Container = styled.div`
       align-items: center;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    padding: 0 3.375em;
+    
+    section {
+      display: grid;
+      grid-template-columns: 8fr 7fr;
+      grid-template-rows: 20vh 43vh 12vh;
+      justify-items: left;
+    }
+  }
+
+  @media screen and (min-width: 1290px) {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
 `
 
 const Title = styled.h1`
@@ -62,6 +80,12 @@ const Title = styled.h1`
     align-self: flex-start;
     font-size: var(--fs-20);
     letter-spacing: 3.375px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    align-self: flex-start;
+    font-size: var(--fs-28);
+    letter-spacing: 4.725px;
   }
 `
 
@@ -85,6 +109,23 @@ const TabImg = styled.div`
       height: auto;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    grid-row: 1 / -1;
+    grid-column: 2;
+    margin-top: 0;
+    align-self: flex-end;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-height: 750px) {
+    img {
+      max-width: 80%;
+    }
+  }
 `
 
 const Slider = styled.ul`
@@ -96,6 +137,12 @@ const Slider = styled.ul`
   @media screen and (min-width: 480px) {
     order: 2;
     margin: 2.25em 0 0;
+  }
+
+  @media screen and (min-width: 1025px) {
+    margin: 0;
+    gap: 1.4em;
+    align-self: flex-start;
   }
 `
 
@@ -113,6 +160,17 @@ const Dot = styled.li`
   &:hover {
     opacity: ${({activedot}) => activedot ? '1' : '.5'};
   }
+
+  @media screen and (min-width: 1025px) {
+    width: 15px; 
+    height: 15px; 
+  }
+`
+
+const Info = styled.div`
+  @media screen and (min-width: 1025px) {
+    align-self: flex-start;
+  }
 `
 
 const CrewRole = styled.p`
@@ -128,6 +186,11 @@ const CrewRole = styled.p`
     font-size: var(--fs-24);
     margin-top: 2.5em;
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-32);
+    margin: 0 0 .1em;
+  }
 `
 
 const CrewName = styled.h2`
@@ -140,7 +203,12 @@ const CrewName = styled.h2`
 
   @media screen and (min-width: 480px) {
     font-size: var(--fs-40);
-    margin: .25 0 .5em;
+    margin: .25em 0 .5em;
+  }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-56);
+    margin: .25em 0 .45em;
   }
 `
 
@@ -155,7 +223,13 @@ const Text = styled.p`
     line-height: 28px;
     max-width: 590px;
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-18);
+    line-height: 32px;
+    max-width: 444px;
+  }
 `
 
 
-export { Hero, Container, Title, TabImg, Slider, Dot, CrewRole, CrewName, Text }
+export { Hero, Container, Title, TabImg, Slider, Info, Dot, CrewRole, CrewName, Text }

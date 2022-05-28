@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { useSiteContext } from "../../contexts/websiteContext";
-import { Hero, Container, Title, TabImg, Slider, Dot, CrewRole, CrewName, Text } from "./Crew.styled";
+import { Hero, Container, Title, TabImg, Slider, Info, Dot, CrewRole, CrewName, Text } from "./Crew.styled";
 import Navbar from '../../components/Navbar'
 import MobileMenu from "../../components/MobileMenu";
 
@@ -34,9 +34,11 @@ function Crew() {
             </Dot>
           ))}
         </Slider>
-        <CrewRole>{currCrewData.role}</CrewRole>
-        <CrewName>{currCrewData.name}</CrewName>
-        <Text>{currCrewData.bio}</Text>
+        <Info>
+          <CrewRole>{currCrewData.role}</CrewRole>
+          <CrewName>{currCrewData.name}</CrewName>
+          <Text>{currCrewData.bio}</Text>
+        </Info>
       </section>
     </Container>
   </Hero>
