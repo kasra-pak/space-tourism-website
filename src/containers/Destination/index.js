@@ -24,23 +24,25 @@ function Destination() {
       <section>
         <Title><span>01</span>pick your destination</Title>
         <TabImg src={currDestData.images.png} alt={currDestData.name} />
-        <Tabs>
-          {content.destinations.map((dest, idx) => (
-            <Tab
-              key={idx}
-              onClick={() => toggleActiveTab(dest.name)}
-              activetab={dest.name === currDestData.name}
-            >
-              {dest.name}
-            </Tab>
-          ))}
-        </Tabs>
-        <TabHeading>{currDestData.name}</TabHeading>
-        <Text>{currDestData.description}</Text>
-        <Statistics>
-          <Statistic>avg. distance <span>{currDestData.distance}</span></Statistic>
-          <Statistic>est. travel time <span>{currDestData.travel}</span></Statistic>
-        </Statistics>
+        <div>
+          <Tabs>
+            {content.destinations.map((dest, idx) => (
+              <Tab
+                key={idx}
+                onClick={() => toggleActiveTab(dest.name)}
+                activetab={dest.name === currDestData.name}
+              >
+                {dest.name}
+              </Tab>
+            ))}
+          </Tabs>
+          <TabHeading>{currDestData.name}</TabHeading>
+          <Text>{currDestData.description}</Text>
+          <Statistics>
+            <Statistic>avg. distance <span>{currDestData.distance}</span></Statistic>
+            <Statistic>est. travel time <span>{currDestData.travel}</span></Statistic>
+          </Statistics>
+        </div>
       </section>
     </Container>
   </Hero>

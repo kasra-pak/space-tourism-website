@@ -13,7 +13,8 @@ const Container = styled.nav`
   }
 
   @media screen and (min-width: 1025px) {
-    padding: 2.5em 0 0 3.4em; 
+    padding: 2.5em 0 0 3.4em;
+    margin-bottom: 4.75em;
   }
 `
 

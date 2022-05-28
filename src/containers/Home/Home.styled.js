@@ -40,7 +40,7 @@ const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    min-height: 67%;
+    min-height: 60%;
     max-width: 80%;
     margin: 0 auto;
   }

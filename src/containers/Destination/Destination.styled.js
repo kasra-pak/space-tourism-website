@@ -34,6 +34,31 @@ const Container = styled.div`
   @media screen and (min-width: 480px) {
     padding: 0 2.5em;
   }
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    padding: 0 3.375em;
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 1154px) {
+    section {
+      justify-content: center;
+      gap: 0 9.8125em;
+    }
+  }
+
+  @media screen and (min-width: 1308px) {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
 `
 
 const Title = styled.h1`
@@ -56,6 +81,13 @@ const Title = styled.h1`
     font-size: var(--fs-20);
     letter-spacing: 3.375px;
   }
+
+  @media screen and (min-width: 1025px) {
+    flex: 1 1 100%;
+    font-size: var(--fs-28);
+    letter-spacing: 4.725px;
+    margin-bottom: 2.29em;
+  }
 `
 
 const TabImg = styled.img`
@@ -66,6 +98,11 @@ const TabImg = styled.img`
     width: 300px;
     margin: 3.75em auto;
   }
+
+  @media screen and (min-width: 1025px) {
+    width: 445px;
+    margin: 0;
+  }
 `
 
 const Tabs = styled.ul`
@@ -75,6 +112,10 @@ const Tabs = styled.ul`
 
   @media screen and (min-width: 480px) {
     gap: 2.25em;
+  }
+
+  @media screen and (min-width: 1025px) {
+    justify-content: flex-start;
   }
 `
 
@@ -130,6 +171,12 @@ const TabHeading = styled.h2`
   @media screen and (min-width: 480px) {
     font-size: var(--fs-80);
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-100);
+    margin: .4em 0 .1em;
+
+  }
 `
 
 const Text = styled.p`
@@ -148,6 +195,13 @@ const Text = styled.p`
     padding-bottom: 3em;
     margin: 0 auto 2.25em;
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-18);
+    line-height: 32px;
+    max-width: 444px;
+
+  }
 `
 
 const Statistics = styled.div`
@@ -157,7 +211,13 @@ const Statistics = styled.div`
 
   @media screen and (min-width: 480px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 6.5em;
+  }
+
+  @media screen and (min-width: 1025px) {
+    justify-content: flex-start;
+    gap: 4em;
   }
 `
 
