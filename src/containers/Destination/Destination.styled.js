@@ -24,6 +24,7 @@ const Hero = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 5em;
   }
 `
 
@@ -96,7 +97,7 @@ const TabImg = styled.img`
 
   @media screen and (min-width: 480px) {
     width: 300px;
-    margin: 3.75em auto;
+    margin: 3.75em auto 3.5em;
   }
 
   @media screen and (min-width: 1025px) {
@@ -128,7 +129,7 @@ const Tab = styled.li`
   font-family: var(--font-secondary);
   font-size: var(--fs-14);
   letter-spacing: 2.3625px;
-  padding: .5em 0;
+  padding: .25em 0 .5em;
   cursor: pointer;
   position: relative;
   
@@ -157,7 +158,7 @@ const Tab = styled.li`
   @media screen and (min-width: 480px) {
     font-size: var(--fs-16);
     letter-spacing: 2.7px;
-    padding: .75em 0 .9em;
+    padding: .25em 0 .9em;
   }
 `
 
