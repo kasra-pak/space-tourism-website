@@ -29,7 +29,26 @@ const Hero = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  margin: 0 1.6em;
+  padding: 0 1.6em;
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    padding: 0 0 0 3.5em;
+    
+    section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5em;
+      gap: 2em;
+    }
+  }
+
+  @media screen and (min-width: 1250px) {
+    padding: 0;
+    margin-left: auto;
+    width: 90%;
+  }
 `
 
 const Title = styled.h1`
@@ -52,7 +71,23 @@ const Title = styled.h1`
     font-size: var(--fs-20);
     letter-spacing: 3.375px;
     text-align: left;
+    padding: 0 1.25em;
+  }
+
+  @media screen and (min-width: 575px) {
     padding: 0 2em;
+  }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-28);
+    letter-spacing: 4.725px;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: 1250px) {
+    width: 90%;
+    margin-left: auto;
+    padding: 0;
   }
 `
 
@@ -66,6 +101,10 @@ const TabImg = styled.img`
     height: auto;
     margin-top: 3.5em;
   }
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
 `
 
 const Slider = styled.ul`
@@ -73,6 +112,11 @@ const Slider = styled.ul`
   justify-content: center;
   gap: 1.1em;
   margin: 3.5em 0;
+
+  @media screen and (min-width: 1025px) {
+    flex-direction: column;
+    gap: 2em;
+  }
 `
 
 const Circle = styled.li`
@@ -99,6 +143,15 @@ const Circle = styled.li`
     font-size: var(--fs-24);
   }
 
+  @media screen and (min-width: 1025px) {
+    width: 80px;
+    height: 80px;
+    font-size: var(--fs-32);
+  }
+`
+
+const Info = styled.div`
+  flex-shrink: 0;
 `
 
 const Term = styled.p`
@@ -127,6 +180,11 @@ const TechName = styled.h2`
     font-size: var(--fs-40);
     margin: .25em 0 .5em;
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-56);
+    margin: .25em 0 .4em;
+  }
 `
 
 const Text = styled.p`
@@ -141,7 +199,23 @@ const Text = styled.p`
     max-width: 440px;
     margin: 0 auto;
   }
+
+  @media screen and (min-width: 1025px) {
+    font-size: var(--fs-18);
+    line-height: 32px;
+    max-width: 444px;
+    margin: 0;
+  }
+`
+
+const TabImgPortrait = styled.img`
+  display: none;
+
+  @media screen and (min-width: 1025px) {
+    display: block;
+    max-width: 35vw;
+  }
 `
 
 
-export { Hero, Container, Title, TabImg, Slider, Circle, Term, TechName, Text }
+export { Hero, Container, Title, TabImg, Slider, Info, Circle, Term, TechName, Text, TabImgPortrait }

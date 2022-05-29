@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { useSiteContext } from "../../contexts/websiteContext";
-import { Hero, Container, Title, TabImg, Slider, Circle, Term, TechName, Text } from "./Technology.styled";
+import { Hero, Container, Title, TabImg, Slider, Info, Circle, Term, TechName, Text, TabImgPortrait } from "./Technology.styled";
 import Navbar from '../../components/Navbar'
 import MobileMenu from "../../components/MobileMenu";
 
@@ -22,7 +22,6 @@ function Technology() {
     <TabImg src={currTechData.images.landscape} alt={currTechData.name} />
     <Container>
       <section>
-        
         <Slider>
           {content.technology.map((item, idx) => (
             <Circle
@@ -34,9 +33,12 @@ function Technology() {
             </Circle>
           ))}
         </Slider>
-        <Term>the terminology ...</Term>
-        <TechName>{currTechData.name}</TechName>
-        <Text>{currTechData.description}</Text>
+        <Info>
+          <Term>the terminology ...</Term>
+          <TechName>{currTechData.name}</TechName>
+          <Text>{currTechData.description}</Text>
+        </Info>
+        <TabImgPortrait src={currTechData.images.portrait} alt={currTechData.name} />
       </section>
     </Container>
   </Hero>
