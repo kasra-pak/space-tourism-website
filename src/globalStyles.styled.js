@@ -45,6 +45,7 @@ import { createGlobalStyle } from "styled-components";
     margin: 0;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: var(--tertiary-text-color);
   }
 
   h1, h2, p, ul {
