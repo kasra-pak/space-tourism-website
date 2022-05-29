@@ -111,7 +111,11 @@ const Slider = styled.ul`
   display: flex;
   justify-content: center;
   gap: 1.1em;
-  margin: 3.5em 0;
+  margin: 2em 0;
+
+  @media screen and (min-width: 480px) {
+    margin: 3.5em 0;
+  }
 
   @media screen and (min-width: 1025px) {
     flex-direction: column;
