@@ -26,9 +26,9 @@ Users should be able to:
 
 ### Screenshots
 
-![Desktop Screen Screenshots](./space-tourism-webiste/screenshots/desktop.svg)
-![Tablet Screen Screenshots](./space-tourism-webiste/screenshots/tablet.svg)
-![Mobile Screen Screenshots](./space-tourism-webiste/screenshots/mobile.svg)
+![Desktop Screen Screenshots](./screenshots/desktop.svg)
+![Tablet Screen Screenshots](./screenshots/tablet.svg)
+![Mobile Screen Screenshots](./screenshots/mobile.svg)
 
 ### Links
 - [Solution](https://your-solution-url.com)
