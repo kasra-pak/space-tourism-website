@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: './src/index.js',
     output: {
+        filename: 'index_bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index_bundle.js'
+        clean: true,
     },
     devServer: {
         port: '3000',
@@ -17,11 +18,11 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                use: [
-                    {
-                        loader: 'file-loader'
-                    }
-                ],
+                loader: 'file-loader',
+                options: {
+                    name: '[folder]/[name].[ext]',
+                    outputPath: 'images'
+                }
             },
             {
                 test: /\.js$/,

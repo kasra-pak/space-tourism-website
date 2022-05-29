@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-import mobileBG from '../../images/home/background-home-mobile.jpg'
-import tabletBG from '../../images/home/background-home-tablet.jpg'
-import desktopBG from '../../images/home/background-home-desktop.jpg'
-
 const Container = styled.div`
   background-color: var(--navbar-bg);
   position: absolute;
