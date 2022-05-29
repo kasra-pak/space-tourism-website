@@ -31,7 +31,7 @@ const Container = styled.div`
   text-align: center;
   padding: 0 1.5em;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 575px) {
     padding: 0 2.5em;
   }
 
@@ -157,6 +157,7 @@ const Tab = styled.li`
   @media screen and (min-width: 480px) {
     font-size: var(--fs-16);
     letter-spacing: 2.7px;
+    padding: .75em 0 .9em;
   }
 `
 
@@ -175,7 +176,6 @@ const TabHeading = styled.h2`
   @media screen and (min-width: 1025px) {
     font-size: var(--fs-100);
     margin: .4em 0 .1em;
-
   }
 `
 

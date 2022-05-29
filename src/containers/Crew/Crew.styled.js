@@ -33,13 +33,15 @@ const Container = styled.div`
   padding: 0 1.5em;
 
   @media screen and (min-width: 480px) {
-    padding: 0 2.5em;
-    
     section {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+  }
+
+  @media screen and (min-width: 575px) {
+    padding: 0 2.5em;
   }
 
   @media screen and (min-width: 1025px) {
@@ -94,8 +96,8 @@ const TabImg = styled.div`
   margin-top: 2em;
 
   img {
-    height: 327px;
-    width: 223px;
+    object-fit: cover;
+    height: 223px;
     margin: 0 auto;
   }
 
