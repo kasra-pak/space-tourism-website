@@ -31,7 +31,7 @@ Users should be able to:
 ![Mobile Screen Screenshots](./screenshots/mobile.svg)
 
 ### Links
-- [Solution](https://your-solution-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/react-and-styled-components-in-space-UCqqT5sIIy)
 - [Live Site](https://kasra-pak.github.io/space-tourism-website/)
 
 ## My process
