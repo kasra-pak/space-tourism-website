@@ -96,7 +96,7 @@ const Text = styled.p`
     max-width: 440px;
   }
 
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 1025px){
     font-size: var(--fs-18);
     line-height: 32px;
     max-width: 444px;
