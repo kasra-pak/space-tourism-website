@@ -10,7 +10,7 @@ function Technology() {
   const { content } = useSiteContext()
   const [currTechData, setCurrTechData] = useState(content.technology[0])
 
-  function toggleActiveTab(crewIndex) {
+  function toggleActiveTab(crewIndex: number) {
     setCurrTechData(content.technology[crewIndex])
   }
 

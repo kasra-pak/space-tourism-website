@@ -1,7 +1,14 @@
 import React, { useContext, useEffect, useState, PropsWithChildren } from "react";
 import data from '../data'
 
-const SiteContext = React.createContext(undefined)
+interface GlobalContent {
+  content: typeof data;
+  isMobileMenuOpen: boolean;
+  toggleMobileMenu: () => void;
+  closeMobileMenu: () => void;
+}
+
+const SiteContext = React.createContext<GlobalContent>(undefined)
 
 function SiteContextProvider({ children }: PropsWithChildren) {
   const [content, setContent] = useState(data)

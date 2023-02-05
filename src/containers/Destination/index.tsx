@@ -10,7 +10,7 @@ function Destination() {
   const { content } = useSiteContext()
   const [currDestData, setCurrDestData] = useState(content.destinations[0])
 
-  function toggleActiveTab(tabName) {
+  function toggleActiveTab(tabName: string) {
     setCurrDestData(content.destinations.filter(data => (
       data.name === tabName
     ))[0])

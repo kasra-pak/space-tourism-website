@@ -120,7 +120,7 @@ const Tabs = styled.ul`
   }
 `
 
-const Tab = styled.li`
+const Tab = styled.li<{activetab: boolean}>`
   list-style: none;
   text-transform: uppercase;
   color: ${({activetab}) => activetab ?

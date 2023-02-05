@@ -148,7 +148,7 @@ const Slider = styled.ul`
   }
 `
 
-const Dot = styled.li`
+const Dot = styled.li<{readonly activedot: boolean}>`
   list-style: none;
   text-transform: uppercase;
   background-color: var(--secondary-text-color);
