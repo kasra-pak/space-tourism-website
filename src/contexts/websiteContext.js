@@ -1,26 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
-import data from '../data'
+import React, { useContext, useState } from 'react';
+import data from '../data';
 
-const SiteContext = React.createContext()
+const SiteContext = React.createContext();
 
 function SiteContextProvider({ children }) {
-  const [content, setContent] = useState(data)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  // function fetchData() {
-  //   setContent(data)
-  // }
-
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
+  const [content, setContent] = useState(data);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function toggleMobileMenu() {
-    setIsMobileMenuOpen(prevState => !prevState)
+    setIsMobileMenuOpen(prevState => !prevState);
   }
 
   function closeMobileMenu() {
-    setIsMobileMenuOpen(false)
+    setIsMobileMenuOpen(false);
   }
 
   return (
@@ -32,13 +24,13 @@ function SiteContextProvider({ children }) {
         closeMobileMenu,
       }}
     >
-      { children }
+      {children}
     </SiteContext.Provider>
-  )
+  );
 }
 
 function useSiteContext() {
-  return useContext(SiteContext)
+  return useContext(SiteContext);
 }
 
-export { useSiteContext, SiteContextProvider}
+export { useSiteContext, SiteContextProvider };

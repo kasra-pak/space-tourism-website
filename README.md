@@ -31,6 +31,7 @@ Users should be able to:
 ![Mobile Screen Screenshots](./screenshots/mobile.svg)
 
 ### Links
+
 - [Solution](https://www.frontendmentor.io/solutions/react-and-styled-components-in-space-UCqqT5sIIy)
 - [Live Site](https://kasra-pak.github.io/space-tourism-website/)
 
@@ -45,6 +46,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
+
 - In this project, I decided to not use [Create React App](https://create-react-app.dev/) and started the project from scratch. This made me gain some insight on [Webpack](https://webpack.js.org/) workflow and configurations.
 
 - It was my first time using [Styled Components](https://styled-components.com/) in a project; Passing props from jsx to css is a very usefull feature.
@@ -53,7 +55,6 @@ Users should be able to:
 
 - [React & Webpack 4 From Scratch](https://www.youtube.com/watch?v=deyxI-6C2u4) - Helped me write my own [Webpack](https://webpack.js.org/) configurations for React App without using [Create React App](https://create-react-app.dev/).
 - [@supports](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports) - This is an amazing CSS at-rule which helped me add `backdrop-filter` porperty only if the client browser supports it.
-
 
 ## Author
 

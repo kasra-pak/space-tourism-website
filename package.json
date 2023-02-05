@@ -6,6 +6,8 @@
   "homepage": "https://kasra-pak.github.io/space-tourism-website",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
+    "format": "prettier --write .",
+    "lint": "eslint .",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -24,10 +26,15 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/runtime": "^7.17.9",
     "babel-loader": "^8.2.5",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
     "gh-pages": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
+    "prettier": "2.8.3",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"

@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import mobileBG from '../../images/destination/background-destination-mobile.jpg'
-import tabletBG from '../../images/destination/background-destination-tablet.jpg'
-import desktopBG from '../../images/destination/background-destination-desktop.jpg'
+import mobileBG from '../../images/destination/background-destination-mobile.jpg';
+import tabletBG from '../../images/destination/background-destination-tablet.jpg';
+import desktopBG from '../../images/destination/background-destination-desktop.jpg';
 
 const Hero = styled.div`
   background: url(${mobileBG});
@@ -26,7 +26,7 @@ const Hero = styled.div`
     background-position: center;
     padding-bottom: 5em;
   }
-`
+`;
 
 const Container = styled.div`
   text-align: center;
@@ -60,7 +60,7 @@ const Container = styled.div`
     margin: 0 auto;
     padding: 0;
   }
-`
+`;
 
 const Title = styled.h1`
   color: var(--secondary-text-color);
@@ -69,12 +69,12 @@ const Title = styled.h1`
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.7px;
-  
+
   span {
     font-weight: 700;
     color: var(--primary-text-color);
-    opacity: .25;
-    margin-right: .75em;
+    opacity: 0.25;
+    margin-right: 0.75em;
   }
 
   @media screen and (min-width: 480px) {
@@ -89,7 +89,7 @@ const Title = styled.h1`
     letter-spacing: 4.725px;
     margin-bottom: 2.29em;
   }
-`
+`;
 
 const TabImg = styled.img`
   width: 170px;
@@ -104,7 +104,7 @@ const TabImg = styled.img`
     width: 445px;
     margin: 0;
   }
-`
+`;
 
 const Tabs = styled.ul`
   display: flex;
@@ -118,21 +118,20 @@ const Tabs = styled.ul`
   @media screen and (min-width: 1025px) {
     justify-content: flex-start;
   }
-`
+`;
 
 const Tab = styled.li`
   list-style: none;
   text-transform: uppercase;
-  color: ${({activetab}) => activetab ?
-      'var(--secondary-text-color)' :
-      'var(--primary-text-color)'};
+  color: ${({ activetab }) =>
+    activetab ? 'var(--secondary-text-color)' : 'var(--primary-text-color)'};
   font-family: var(--font-secondary);
   font-size: var(--fs-14);
   letter-spacing: 2.3625px;
-  padding: .25em 0 .5em;
+  padding: 0.25em 0 0.5em;
   cursor: pointer;
   position: relative;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -141,14 +140,14 @@ const Tab = styled.li`
     height: 3px;
     left: 0;
     bottom: -3px;
-    display: ${props => props.activetab ? 'block' : 'none'};
+    display: ${props => (props.activetab ? 'block' : 'none')};
   }
-  
+
   &:hover::after {
     content: '';
     position: absolute;
-    background-color: ${props => props.activetab ?
-      '#fff' : 'rgba(255, 255, 255, .5)'};
+    background-color: ${props =>
+      props.activetab ? '#fff' : 'rgba(255, 255, 255, .5)'};
     width: 100%;
     height: 3px;
     left: 0;
@@ -158,9 +157,9 @@ const Tab = styled.li`
   @media screen and (min-width: 480px) {
     font-size: var(--fs-16);
     letter-spacing: 2.7px;
-    padding: .25em 0 .9em;
+    padding: 0.25em 0 0.9em;
   }
-`
+`;
 
 const TabHeading = styled.h2`
   font-family: var(--font-primary);
@@ -168,7 +167,7 @@ const TabHeading = styled.h2`
   font-weight: 400;
   color: var(--secondary-text-color);
   text-transform: uppercase;
-  margin: .5em 0 .1em;
+  margin: 0.5em 0 0.1em;
 
   @media screen and (min-width: 480px) {
     font-size: var(--fs-80);
@@ -176,9 +175,9 @@ const TabHeading = styled.h2`
 
   @media screen and (min-width: 1025px) {
     font-size: var(--fs-100);
-    margin: .4em 0 .1em;
+    margin: 0.4em 0 0.1em;
   }
-`
+`;
 
 const Text = styled.p`
   font-family: var(--font-tertiary);
@@ -201,9 +200,8 @@ const Text = styled.p`
     font-size: var(--fs-18);
     line-height: 32px;
     max-width: 444px;
-
   }
-`
+`;
 
 const Statistics = styled.div`
   display: flex;
@@ -220,7 +218,7 @@ const Statistics = styled.div`
     justify-content: flex-start;
     gap: 4em;
   }
-`
+`;
 
 const Statistic = styled.p`
   font-family: var(--font-secondary);
@@ -229,14 +227,25 @@ const Statistic = styled.p`
   color: var(--primary-text-color);
   text-transform: uppercase;
   letter-spacing: 2.3625px;
-  
+
   span {
     display: block;
     font-family: var(--font-primary);
     font-size: var(--fs-28);
     color: var(--secondary-text-color);
-    margin-top: .25em;
+    margin-top: 0.25em;
   }
-`
+`;
 
-export { Hero, Container, Title, TabImg, Tabs, Tab, TabHeading, Text, Statistics,  Statistic }
+export {
+  Hero,
+  Container,
+  Title,
+  TabImg,
+  Tabs,
+  Tab,
+  TabHeading,
+  Text,
+  Statistics,
+  Statistic,
+};

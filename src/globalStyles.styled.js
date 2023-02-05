@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
- const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   
   :root {
     //font-family
@@ -57,7 +57,6 @@ import { createGlobalStyle } from "styled-components";
     display: block;
     max-width: 100%;
   }
-`
+`;
 
-export default GlobalStyle
-
+export default GlobalStyle;

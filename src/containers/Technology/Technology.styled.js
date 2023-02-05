@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import mobileBG from '../../images/technology/background-technology-mobile.jpg'
-import tabletBG from '../../images/technology/background-technology-tablet.jpg'
-import desktopBG from '../../images/technology/background-technology-desktop.jpg'
+import mobileBG from '../../images/technology/background-technology-mobile.jpg';
+import tabletBG from '../../images/technology/background-technology-tablet.jpg';
+import desktopBG from '../../images/technology/background-technology-desktop.jpg';
 
 const Hero = styled.div`
   background: url(${mobileBG});
@@ -25,7 +25,7 @@ const Hero = styled.div`
     background-size: cover;
     background-position: center;
   }
-`
+`;
 
 const Container = styled.div`
   text-align: center;
@@ -34,7 +34,7 @@ const Container = styled.div`
   @media screen and (min-width: 1025px) {
     text-align: left;
     padding: 0 0 0 3.5em;
-    
+
     section {
       display: flex;
       justify-content: space-between;
@@ -49,7 +49,7 @@ const Container = styled.div`
     margin-left: auto;
     width: 90%;
   }
-`
+`;
 
 const Title = styled.h1`
   text-align: center;
@@ -59,12 +59,12 @@ const Title = styled.h1`
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2.7px;
-  
+
   span {
     font-weight: 700;
     color: var(--primary-text-color);
-    opacity: .25;
-    margin-right: .75em;
+    opacity: 0.25;
+    margin-right: 0.75em;
   }
 
   @media screen and (min-width: 480px) {
@@ -89,12 +89,12 @@ const Title = styled.h1`
     margin-left: auto;
     padding: 0;
   }
-`
+`;
 
 const TabImg = styled.img`
   width: 100%;
   height: 170px;
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 2em;
 
   @media screen and (min-width: 480px) {
@@ -105,7 +105,7 @@ const TabImg = styled.img`
   @media screen and (min-width: 1025px) {
     display: none;
   }
-`
+`;
 
 const Slider = styled.ul`
   display: flex;
@@ -121,14 +121,18 @@ const Slider = styled.ul`
     flex-direction: column;
     gap: 2em;
   }
-`
+`;
 
 const Circle = styled.li`
   list-style: none;
   font-family: var(--font-primary);
-  background-color: ${({activecircle}) => activecircle ? 'var(--secondary-text-color)' : 'transparent'};
-  color: ${({activecircle}) => activecircle ? 'default' : 'var(--secondary-text-color)'};
-  border: 1px solid ${({activecircle}) => activecircle ? 'var(--secondary-text-color)' : 'rgba(255,255,255,.25)'};
+  background-color: ${({ activecircle }) =>
+    activecircle ? 'var(--secondary-text-color)' : 'transparent'};
+  color: ${({ activecircle }) =>
+    activecircle ? 'default' : 'var(--secondary-text-color)'};
+  border: 1px solid
+    ${({ activecircle }) =>
+      activecircle ? 'var(--secondary-text-color)' : 'rgba(255,255,255,.25)'};
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -136,7 +140,7 @@ const Circle = styled.li`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  
+
   &:hover {
     border: 1px solid var(--secondary-text-color);
   }
@@ -152,11 +156,11 @@ const Circle = styled.li`
     height: 80px;
     font-size: var(--fs-32);
   }
-`
+`;
 
 const Info = styled.div`
   flex-shrink: 0;
-`
+`;
 
 const Term = styled.p`
   font-family: var(--font-secondary);
@@ -170,7 +174,7 @@ const Term = styled.p`
     font-size: var(--fs-16);
     letter-spacing: 2.7px;
   }
-`
+`;
 
 const TechName = styled.h2`
   font-family: var(--font-primary);
@@ -178,18 +182,18 @@ const TechName = styled.h2`
   font-weight: 400;
   color: var(--secondary-text-color);
   text-transform: uppercase;
-  margin: .5em 0 .75em;
+  margin: 0.5em 0 0.75em;
 
   @media screen and (min-width: 480px) {
     font-size: var(--fs-40);
-    margin: .25em 0 .5em;
+    margin: 0.25em 0 0.5em;
   }
 
   @media screen and (min-width: 1025px) {
     font-size: var(--fs-56);
-    margin: .25em 0 .4em;
+    margin: 0.25em 0 0.4em;
   }
-`
+`;
 
 const Text = styled.p`
   font-family: var(--font-tertiary);
@@ -210,7 +214,7 @@ const Text = styled.p`
     max-width: 444px;
     margin: 0;
   }
-`
+`;
 
 const TabImgPortrait = styled.img`
   display: none;
@@ -219,7 +223,18 @@ const TabImgPortrait = styled.img`
     display: block;
     max-width: 35vw;
   }
-`
+`;
 
-
-export { Hero, Container, Title, TabImg, Slider, Info, Circle, Term, TechName, Text, TabImgPortrait }
+export {
+  Hero,
+  Container,
+  Title,
+  TabImg,
+  Slider,
+  Info,
+  Circle,
+  Term,
+  TechName,
+  Text,
+  TabImgPortrait,
+};

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.div`
   background-color: var(--navbar-bg);
@@ -8,8 +8,8 @@ const Container = styled.div`
   bottom: 0;
   right: 0;
   overflow: hidden;
-  transform: translateX(${props => props.show ? '0' : '100%'});
-  transition: transform .3s ease;
+  transform: translateX(${props => (props.show ? '0' : '100%')});
+  transition: transform 0.3s ease;
   z-index: 2;
 
   @supports (backdrop-filter: blur(2rem)) {
@@ -20,12 +20,12 @@ const Container = styled.div`
   @media screen and (min-width: 575px) {
     transform: translateX(100%);
   }
-`
+`;
 
 const NavList = styled.ul`
   list-style: none;
   margin-top: 7.5em;
- 
+
   a {
     font-family: var(--font-secondary);
     color: var(--secondary-text-color);
@@ -34,7 +34,7 @@ const NavList = styled.ul`
     letter-spacing: 2.7px;
     display: block;
     width: 100%;
-    padding: .5em 0;
+    padding: 0.5em 0;
   }
 
   span {
@@ -43,23 +43,24 @@ const NavList = styled.ul`
     font-weight: bold;
     margin-right: 1em;
   }
-`
+`;
 
 const Item = styled.li`
   margin-left: 2em;
-  transition: border .15s ease;
-  border-right: ${({activepage}) => activepage ?
-      '4px solid var(--secondary-text-color)': 'none'};
+  transition: border 0.15s ease;
+  border-right: ${({ activepage }) =>
+    activepage ? '4px solid var(--secondary-text-color)' : 'none'};
 
   + li {
-    margin-top: 1em;    
+    margin-top: 1em;
   }
 
   &:hover {
-    border-right: ${({activepage}) => activepage ?
-      '4px solid var(--secondary-text-color)':
-      '4px solid rgba(255, 255, 255, .5)'};
+    border-right: ${({ activepage }) =>
+      activepage
+        ? '4px solid var(--secondary-text-color)'
+        : '4px solid rgba(255, 255, 255, .5)'};
   }
-`
+`;
 
-export { Container, NavList, Item }
+export { Container, NavList, Item };
