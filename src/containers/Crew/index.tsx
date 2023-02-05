@@ -20,7 +20,7 @@ function Crew() {
   const { content } = useSiteContext();
   const [currCrewData, setCurrCrewData] = useState(content.crew[0]);
 
-  function toggleActiveTab(crewIndex) {
+  function toggleActiveTab(crewIndex: number) {
     setCurrCrewData(content.crew[crewIndex]);
   }
 
@@ -37,7 +37,7 @@ function Crew() {
             <img src={currCrewData.images.png} alt={currCrewData.name} />
           </TabImg>
           <Slider>
-            {content.crew.map((item, idx) => (
+            {content.crew.map((item, idx: number) => (
               <Dot
                 key={idx}
                 onClick={() => toggleActiveTab(idx)}
@@ -55,5 +55,3 @@ function Crew() {
     </Hero>
   );
 }
-
-export default Crew;

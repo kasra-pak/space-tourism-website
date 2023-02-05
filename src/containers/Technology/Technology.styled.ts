@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import mobileBG from '../../images/crew/background-crew-mobile.jpg';
-import tabletBG from '../../images/crew/background-crew-tablet.jpg';
-import desktopBG from '../../images/crew/background-crew-desktop.jpg';
+import mobileBG from '../../images/technology/background-technology-mobile.jpg';
+import tabletBG from '../../images/technology/background-technology-tablet.jpg';
+import desktopBG from '../../images/technology/background-technology-desktop.jpg';
 
 const Hero = styled.div`
   background: url(${mobileBG});
@@ -17,7 +17,6 @@ const Hero = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 0;
   }
 
   @media screen and (min-width: 1025px) {
@@ -30,40 +29,30 @@ const Hero = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  padding: 0 1.5em;
-
-  @media screen and (min-width: 480px) {
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  @media screen and (min-width: 575px) {
-    padding: 0 2.5em;
-  }
+  padding: 0 1.6em;
 
   @media screen and (min-width: 1025px) {
     text-align: left;
-    padding: 0 3.375em;
+    padding: 0 0 0 3.5em;
 
     section {
-      display: grid;
-      grid-template-columns: 8fr 7fr;
-      grid-template-rows: 20vh 43vh 12vh;
-      justify-items: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5em;
+      gap: 2em;
     }
   }
 
-  @media screen and (min-width: 1290px) {
-    max-width: 80%;
-    margin: 0 auto;
+  @media screen and (min-width: 1250px) {
     padding: 0;
+    margin-left: auto;
+    width: 90%;
   }
 `;
 
 const Title = styled.h1`
+  text-align: center;
   color: var(--secondary-text-color);
   font-family: var(--font-secondary);
   font-size: var(--fs-16);
@@ -79,54 +68,42 @@ const Title = styled.h1`
   }
 
   @media screen and (min-width: 480px) {
-    align-self: flex-start;
     font-size: var(--fs-20);
     letter-spacing: 3.375px;
+    text-align: left;
+    padding: 0 1.25em;
+  }
+
+  @media screen and (min-width: 575px) {
+    padding: 0 2em;
   }
 
   @media screen and (min-width: 1025px) {
-    align-self: flex-start;
     font-size: var(--fs-28);
     letter-spacing: 4.725px;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width: 1250px) {
+    width: 90%;
+    margin-left: auto;
+    padding: 0;
   }
 `;
 
-const TabImg = styled.div`
+const TabImg = styled.img`
+  width: 100%;
+  height: 170px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 2em;
 
-  img {
-    object-fit: cover;
-    height: 223px;
-    margin: 0 auto;
-  }
-
   @media screen and (min-width: 480px) {
-    order: 3;
-    border: none;
-    overflow: hidden;
-
-    img {
-      width: 90%;
-      height: auto;
-    }
+    height: auto;
+    margin-top: 3.5em;
   }
 
   @media screen and (min-width: 1025px) {
-    grid-row: 1 / -1;
-    grid-column: 2;
-    margin-top: 0;
-    align-self: flex-end;
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  @media screen and (max-height: 750px) {
-    img {
-      max-width: 80%;
-    }
+    display: none;
   }
 `;
 
@@ -134,74 +111,78 @@ const Slider = styled.ul`
   display: flex;
   justify-content: center;
   gap: 1.1em;
-  margin: 2.25em 0;
+  margin: 2em 0;
 
   @media screen and (min-width: 480px) {
-    order: 2;
-    margin: 2.25em 0 0;
+    margin: 3.5em 0;
   }
 
   @media screen and (min-width: 1025px) {
-    margin: 0;
-    gap: 1.4em;
-    align-self: flex-start;
+    flex-direction: column;
+    gap: 2em;
   }
 `;
 
-const Dot = styled.li`
+const Circle = styled.li<{activecircle: boolean}>`
   list-style: none;
-  text-transform: uppercase;
-  background-color: var(--secondary-text-color);
-  opacity: ${({ activedot }) => (activedot ? '1' : '.17')};
-  width: 10px;
-  height: 10px;
+  font-family: var(--font-primary);
+  background-color: ${({ activecircle }) =>
+    activecircle ? 'var(--secondary-text-color)' : 'transparent'};
+  color: ${({ activecircle }) =>
+    activecircle ? 'default' : 'var(--secondary-text-color)'};
+  border: 1px solid
+    ${({ activecircle }) =>
+      activecircle ? 'var(--secondary-text-color)' : 'rgba(255,255,255,.25)'};
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  position: relative;
 
   &:hover {
-    opacity: ${({ activedot }) => (activedot ? '1' : '.5')};
+    border: 1px solid var(--secondary-text-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 58px;
+    height: 58px;
+    font-size: var(--fs-24);
   }
 
   @media screen and (min-width: 1025px) {
-    width: 15px;
-    height: 15px;
+    width: 80px;
+    height: 80px;
+    font-size: var(--fs-32);
   }
 `;
 
 const Info = styled.div`
-  @media screen and (min-width: 1025px) {
-    align-self: flex-start;
-  }
+  flex-shrink: 0;
 `;
 
-const CrewRole = styled.p`
-  font-family: var(--font-primary);
-  font-size: var(--fs-16);
+const Term = styled.p`
+  font-family: var(--font-secondary);
+  font-size: var(--fs-14);
   font-weight: 400;
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-transform: uppercase;
-  margin: 0.5em 0 0.1em;
-  opacity: 0.5;
+  letter-spacing: 2.3625px;
 
   @media screen and (min-width: 480px) {
-    font-size: var(--fs-24);
-    margin-top: 2.5em;
-  }
-
-  @media screen and (min-width: 1025px) {
-    font-size: var(--fs-32);
-    margin: 0 0 0.1em;
+    font-size: var(--fs-16);
+    letter-spacing: 2.7px;
   }
 `;
 
-const CrewName = styled.h2`
+const TechName = styled.h2`
   font-family: var(--font-primary);
   font-size: var(--fs-24);
   font-weight: 400;
   color: var(--secondary-text-color);
   text-transform: uppercase;
-  margin: 0.25em 0 1em;
+  margin: 0.5em 0 0.75em;
 
   @media screen and (min-width: 480px) {
     font-size: var(--fs-40);
@@ -210,7 +191,7 @@ const CrewName = styled.h2`
 
   @media screen and (min-width: 1025px) {
     font-size: var(--fs-56);
-    margin: 0.25em 0 0.45em;
+    margin: 0.25em 0 0.4em;
   }
 `;
 
@@ -223,13 +204,24 @@ const Text = styled.p`
   @media screen and (min-width: 480px) {
     font-size: var(--fs-16);
     line-height: 28px;
-    max-width: 590px;
+    max-width: 440px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: 1025px) {
     font-size: var(--fs-18);
     line-height: 32px;
     max-width: 444px;
+    margin: 0;
+  }
+`;
+
+const TabImgPortrait = styled.img`
+  display: none;
+
+  @media screen and (min-width: 1025px) {
+    display: block;
+    max-width: 35vw;
   }
 `;
 
@@ -240,8 +232,9 @@ export {
   TabImg,
   Slider,
   Info,
-  Dot,
-  CrewRole,
-  CrewName,
+  Circle,
+  Term,
+  TechName,
   Text,
+  TabImgPortrait,
 };
