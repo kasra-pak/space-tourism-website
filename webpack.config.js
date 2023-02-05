@@ -28,18 +28,20 @@ module.exports = {
                 test: /\.(js|ts)x?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'ts-loader'
                 }
             },
+            { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" }
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js']
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
             favicon: './src/images/shared/logo.svg'
         })
-    ]
+    ],
+    devtool: 'source-map'
 };

@@ -4,9 +4,12 @@ import { SiteContextProvider } from './contexts/websiteContext'
 import App from './App'
 
 const container = document.getElementById('root')
-const root = ReactDOMClient.createRoot(container)
-root.render(
-  <SiteContextProvider>
+
+if (container) {
+  const root = ReactDOMClient.createRoot(container)
+  root.render(
+    <SiteContextProvider>
     <App />
   </SiteContextProvider>
 )
+}
