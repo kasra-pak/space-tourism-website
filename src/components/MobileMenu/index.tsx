@@ -45,3 +45,5 @@ function MobileMenu() {
 }
 
 export default MobileMenu;
+
+export default MobileMenu;

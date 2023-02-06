@@ -66,3 +66,5 @@ function Destination() {
 }
 
 export default Destination;
+
+export default Destination;
