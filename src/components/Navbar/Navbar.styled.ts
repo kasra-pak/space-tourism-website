@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import hamburgerImg from '../../images/shared/icon-hamburger.svg'
-import closeImg from '../../images/shared/icon-close.svg'
+import hamburgerImg from '../../images/shared/icon-hamburger.svg';
+import closeImg from '../../images/shared/icon-close.svg';
 
 const Container = styled.nav`
   padding: 1.5em;
@@ -16,14 +16,13 @@ const Container = styled.nav`
     padding: 2.5em 0 0 3.4em;
     margin-bottom: 4.75em;
   }
-`
+`;
 
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-`
+`;
 
 const Logo = styled.img`
   width: 40px;
@@ -31,7 +30,7 @@ const Logo = styled.img`
   @media screen and (min-width: 480px) {
     width: 48px;
   }
-`
+`;
 
 const WhiteLine = styled.div`
   background-color: var(--secondary-text-color);
@@ -45,7 +44,7 @@ const WhiteLine = styled.div`
   @media screen and (min-width: 1070px) {
     display: block;
   }
-`
+`;
 
 const NavList = styled.ul`
   list-style: none;
@@ -54,10 +53,10 @@ const NavList = styled.ul`
   background-color: var(--navbar-bg);
 
   @supports (backdrop-filter: blur(2rem)) {
-    background-color: rgba(255, 255, 255, .04);
+    background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(2rem);
   }
- 
+
   a {
     font-family: var(--font-secondary);
     font-size: var(--fs-14);
@@ -72,7 +71,7 @@ const NavList = styled.ul`
   span {
     width: 3ch;
     font-weight: bold;
-    margin-right: .7em;
+    margin-right: 0.7em;
     display: none;
 
     @media screen and (min-width: 1025px) {
@@ -94,27 +93,28 @@ const NavList = styled.ul`
       letter-spacing: 2.7px;
     }
   }
-`
+`;
 
-const Item = styled.li`
-  border-bottom: ${({activepage}) => activepage ?
-      '3px solid var(--secondary-text-color)': 'none'};
-  transition: border .15s ease;
+const Item = styled.li<{ activepage: boolean }>`
+  border-bottom: ${({ activepage }) =>
+    activepage ? '3px solid var(--secondary-text-color)' : 'none'};
+  transition: border 0.15s ease;
 
   &:hover {
-    border-bottom: ${({activepage}) => activepage ?
-      '3px solid var(--secondary-text-color)':
-      '3px solid rgba(255, 255, 255, .5)'};
+    border-bottom: ${({ activepage }) =>
+      activepage
+        ? '3px solid var(--secondary-text-color)'
+        : '3px solid rgba(255, 255, 255, .5)'};
   }
-`
+`;
 
-const Hamburger = styled.button`
+const Hamburger = styled.button<{ open: boolean }>`
   border: none;
   width: 25px;
   height: 22px;
-  padding: .25em;
+  padding: 0.25em;
   cursor: pointer;
-  background: url(${props => props.open ? closeImg : hamburgerImg});
+  background: url(${props => (props.open ? closeImg : hamburgerImg)});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -123,6 +123,6 @@ const Hamburger = styled.button`
   @media screen and (min-width: 575px) {
     display: none;
   }
-`
+`;
 
-export { Container, Content, Logo, WhiteLine, NavList, Item, Hamburger }
+export { Container, Content, Logo, WhiteLine, NavList, Item, Hamburger };

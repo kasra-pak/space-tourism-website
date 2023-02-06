@@ -1,5 +1,10 @@
-import React, { useContext, useEffect, useState, PropsWithChildren } from "react";
-import data from '../data'
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  PropsWithChildren,
+} from 'react';
+import data from '../data';
 
 interface GlobalContent {
   content: typeof data;
@@ -8,26 +13,25 @@ interface GlobalContent {
   closeMobileMenu: () => void;
 }
 
-const SiteContext = React.createContext<GlobalContent>(undefined)
+const initialValue = {
+  content: data,
+  isMobileMenuOpen: false,
+  toggleMobileMenu: () => {},
+  closeMobileMenu: () => {},
+};
+
+const SiteContext = React.createContext<GlobalContent>(initialValue);
 
 function SiteContextProvider({ children }: PropsWithChildren) {
-  const [content, setContent] = useState(data)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  // function fetchData() {
-  //   setContent(data)
-  // }
-
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
+  const [content, setContent] = useState(data);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function toggleMobileMenu() {
-    setIsMobileMenuOpen(prevState => !prevState)
+    setIsMobileMenuOpen(prevState => !prevState);
   }
 
   function closeMobileMenu() {
-    setIsMobileMenuOpen(false)
+    setIsMobileMenuOpen(false);
   }
 
   return (
@@ -39,13 +43,13 @@ function SiteContextProvider({ children }: PropsWithChildren) {
         closeMobileMenu,
       }}
     >
-      { children }
+      {children}
     </SiteContext.Provider>
-  )
+  );
 }
 
 function useSiteContext() {
-  return useContext(SiteContext)
+  return useContext(SiteContext);
 }
 
-export { useSiteContext, SiteContextProvider}
+export { useSiteContext, SiteContextProvider };

@@ -123,7 +123,7 @@ const Slider = styled.ul`
   }
 `;
 
-const Circle = styled.li<{activecircle: boolean}>`
+const Circle = styled.li<{ activecircle: boolean }>`
   list-style: none;
   font-family: var(--font-primary);
   background-color: ${({ activecircle }) =>
