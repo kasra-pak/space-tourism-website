@@ -57,5 +57,3 @@ function Crew() {
 }
 
 export default Crew;
-
-export default Crew;

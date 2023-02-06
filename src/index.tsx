@@ -13,12 +13,3 @@ if (container) {
     </SiteContextProvider>
   );
 }
-
-if (container) {
-  const root = ReactDOMClient.createRoot(container);
-  root.render(
-    <SiteContextProvider>
-      <App />
-    </SiteContextProvider>
-  );
-}

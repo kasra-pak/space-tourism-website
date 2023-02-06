@@ -53,5 +53,3 @@ function useSiteContext() {
 }
 
 export { useSiteContext, SiteContextProvider };
-
-export { useSiteContext, SiteContextProvider };
