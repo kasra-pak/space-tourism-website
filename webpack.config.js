@@ -31,7 +31,12 @@ module.exports = {
           loader: 'ts-loader',
         },
       },
-            { enforce: "pre", test: /\.js$/, exclude: /node_modules/, loader: "source-map-loader" }
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'source-map-loader',
+      },
     ],
   },
   resolve: {
@@ -42,6 +47,6 @@ module.exports = {
       template: './src/index.html',
       favicon: './src/images/shared/logo.svg',
     }),
-  ],,
-    devtool: 'source-map'
+  ],
+  devtool: 'source-map',
 };

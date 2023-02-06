@@ -60,3 +60,5 @@ function Technology() {
     </Hero>
   );
 }
+
+export default Technology;

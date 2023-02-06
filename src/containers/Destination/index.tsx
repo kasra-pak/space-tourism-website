@@ -64,3 +64,5 @@ function Destination() {
     </Hero>
   );
 }
+
+export default Destination;

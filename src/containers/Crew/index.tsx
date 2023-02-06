@@ -55,3 +55,5 @@ function Crew() {
     </Hero>
   );
 }
+
+export default Crew;
