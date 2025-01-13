@@ -5,6 +5,8 @@ import tabletBG from '../../images/home/background-home-tablet.jpg';
 import desktopBG from '../../images/home/background-home-desktop.jpg';
 
 const Hero = styled.div`
+  position: relative;
+  overflow: hidden;
   background: url(${mobileBG});
   background-repeat: no-repeat;
   background-size: cover;
